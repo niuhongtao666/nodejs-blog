@@ -6,7 +6,7 @@ module.exports=function(passport){
         function(username, password, done) {
           User.findOne({ username: username }, function(err, user) {
             if (err) {
-                alert(err);
+                // alert(err);
                 return done(err);
             }
             if (!user) {

@@ -3,6 +3,7 @@ html(lang="en")
   head
     title nodejs-blog
     link(rel='stylesheet',href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet',href='/css/base.css')
     link(rel='stylesheet',href='/css/style.css')
   body
     nav.navbar.navbar-expand-md.navbar-dark.bg-dark.mb-2
@@ -30,6 +31,7 @@ html(lang="en")
                 a.nav-link(href='/users/register') Register
               li.nav-item
                 a.nav-link(href='/users/login') Login
+    .snow-container
     .container
       if errors
         each error in errors
@@ -37,9 +39,10 @@ html(lang="en")
       != messages('message', locals)
       block content
       br
-      hr
       footer
           p right for me
     script(src='/bower_components/jquery/dist/jquery.min.js')
     script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
     script(src='/js/main.js')
+    script(src='http://www.lmlblog.com/winter/templets/xq/js/snowy.js')
+    script(src='http://www.lmlblog.com/blog/12/js/Snow.js')
