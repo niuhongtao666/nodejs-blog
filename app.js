@@ -17,6 +17,7 @@ app.use(function (req, res, next) {
 });
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname,'public')));
+//passportjs初始化开始
 require('./config/passport')(passport);
 app.use(session({
     secret:config.secret,
@@ -25,6 +26,7 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+//passportjs初始化结束
 app.get('*',function(req,res,next){
     res.locals.user=req.user || null;
     next();
