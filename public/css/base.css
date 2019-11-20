@@ -9,6 +9,7 @@ html,body{
     /*color: #fff;*/
     background: url("../images/snow.jpg") no-repeat center center;
     background-size: 100% 100%;
+    color: #fff;
 }
 hr{
     border-top: 1px solid #fff!important;
@@ -22,10 +23,14 @@ a{
     text-decoration:none;
 }
 input{
-    width: 300px!important;
+    width: 400px!important;
 }
 h3{
-    text-align: center;
+    margin-top: 40px;
+    text-align: left;
+}
+li{
+    list-style: none;
 }
 footer{
     position: fixed;
@@ -49,4 +54,9 @@ h1,h3{
 }
 label{
     color: #fff!important;
+}
+textarea{
+    width: 400px!important;
+    height: 100px!important;
+    resize:none;
 }

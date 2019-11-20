@@ -23,7 +23,7 @@ footer p{
 form{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
 }
 .loginZone{
     position: fixed;
@@ -35,3 +35,105 @@ form{
     -o-transform: translate(-50%,-50%);
     left: 50%;
 }
+.container{
+    /*margin-top: 30px;*/
+}
+/*登陆css开始*/
+.loginZone h3{
+    text-align: center!important;
+}
+/*登陆css结束*/
+/*创建新文章css开始*/
+.imgArticle{
+    width: 150px;
+    /*display: inline-block;*/
+    /*width: 150px;*/
+    /*height: 150px;*/
+    box-sizing: border-box;
+    /*padding: 10px;*/
+    /*height: 100px;*/
+    background: #fff;
+    margin-top: 20px;
+    display: flex;
+    /*flex-direction: row;*/
+    justify-content:flex-start;
+    align-content:center;
+    flex-wrap: wrap;
+    position: relative;
+    display: none;
+}
+.imgArticle .deleteImg{
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    background: red;
+    cursor: pointer;
+}
+.imgArticle #each{
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    /*float: left;*/
+    /*background: red;*/
+    /*margin: 10px;*/
+    /*flex-grow:1*/
+}
+/*创建新文章css结束*/
+/*文章详情开始*/
+.showImg{
+    width: 150px;
+    height: 150px;
+    background: #fff;
+}
+.showImg img{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+}
+/*文章编辑开始*/
+.imgArticleEdit{
+    width: 150px;
+    /*display: inline-block;*/
+    /*width: 150px;*/
+    /*height: 150px;*/
+    box-sizing: border-box;
+    /*padding: 10px;*/
+    /*height: 100px;*/
+    background: #fff;
+    margin-top: 20px;
+    display: flex;
+    /*flex-direction: row;*/
+    justify-content:flex-start;
+    align-content:center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.imgArticleEdit .deleteImgEdit{
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    background: red;
+    cursor: pointer;
+}
+.imgArticleEdit #eachEdit{
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    /*float: left;*/
+    /*background: red;*/
+    /*margin: 10px;*/
+    /*flex-grow:1*/
+}
+/*文章编辑结束*/

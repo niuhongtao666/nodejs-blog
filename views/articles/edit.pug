@@ -11,6 +11,16 @@ block content
             .form-group
                 label Body:
                 textarea.form-control(name='body')=article.body
+            .form-group
+                label images:
+                input#filesEdit(type='file', name='file', multiple='' data-id=article.id)
+                if article.fileName
+                    .imgArticleEdit
+                        .deleteImgEdit X
+                        img#eachEdit(src=article.fileName)
+            .form-group
+                label
+                input#fileNameEdit(type='hidden',name='fileName' value=article.fileName)
             br
             input.btn.btn-primary(type='submit',value='submit')
 

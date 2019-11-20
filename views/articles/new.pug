@@ -12,5 +12,13 @@ block content
         .form-group
             label Body:
             textarea.form-control(name='body')
-        br
+        .form-group
+            label images:
+            input#files(type='file', name='file', multiple='')
+            .imgArticle
+                .deleteImg X
+                img#each(src='')
+        .form-group
+            label
+            input#fileName(type='hidden',name='fileName')
         input.btn.btn-primary(type='submit',value='submit')

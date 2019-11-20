@@ -2,7 +2,10 @@ extends ../layout
 
 block content
     h1 Articles
-    ul.list-group
-      each article in articles
-        li.list-group-item
-          a(href='/articles/'+article.id)=article.title
+    if articles.length
+        ul.list-group
+          each article in articles
+            li.list-group-item
+              a(href='/articles/'+article.id)=article.title
+    else
+        h5 请添加文章

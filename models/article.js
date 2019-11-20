@@ -8,6 +8,14 @@ let articleSchema=new mongoose.Schema({
         type:String,
         required:true
     },
+    fileName:{
+        type:String,
+        // required:true
+    },
+    file:{
+        type:String,
+        // required:true
+    },
     body:{
         type:String,
         required:true
