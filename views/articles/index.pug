@@ -1,11 +1,33 @@
 extends ../layout
 
 block content
-    h1 Articles
-    if articles.length
-        ul.list-group
-          each article in articles
-            li.list-group-item
-              a(href='/articles/'+article.id)=article.title
-    else
-        h5 请添加文章
+    //h1 Articles
+    //if articles.length
+    //    ul.list-group
+    //      each article in articles
+    //        li.list-group-item
+    //          a(href='/articles/'+article.id)=article.title
+    //else
+    //    h5 请添加文章
+    #zt.container-fluid.m
+        .container.m0.bod
+            each article in articles
+                .col-lg-4.col-md-3.col-sm-4
+                    a(href='/articles/'+article.id, target='_blank')
+                        img(src=article.fileName)
+                    .cover-info
+                        a(href='/articles/'+article.id, target='_blank')
+                            //h4 Drag拖动选择插件(原创)
+                        h5=article.title
+                        small=article.body
+                    //.cover-fields
+                    //    i.fa.fa-list-ul
+                    //    | 拖和放,选择框
+                    //.cover-stat
+                    //    i.fa.fa-eye
+                    //    span.f10  184
+                    //    i.fa.fa-heart
+                    //    span.f10   6
+                    //    .cover-yh
+                    //        a(href='mem235374', data-container='body', data-toggle='popover', data-placement='top', data-content='ovsexia ', data-original-title='', title='')
+                    //            i.fa.fa-user-secret

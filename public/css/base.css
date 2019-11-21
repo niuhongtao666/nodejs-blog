@@ -7,9 +7,9 @@ html,body{
     height: 100%;
     background: #000;
     /*color: #fff;*/
-    background: url("../images/snow.jpg") no-repeat center center;
-    background-size: 100% 100%;
-    color: #fff;
+    /*background: url("../images/snow.jpg") no-repeat center center;*/
+    /*background-size: 100% 100%;*/
+    color: #000;
 }
 hr{
     border-top: 1px solid #fff!important;
@@ -19,7 +19,7 @@ a{
     text-decoration:none;
 }
 .list-group-item a {
-    color: #000!important;
+    color: #fff!important;
     text-decoration:none;
 }
 input{
@@ -47,16 +47,25 @@ footer{
     border-top: 1px solid #fff;
 }
 .bg-dark{
-    background: transparent!important;
+    background:#000!important;
+    color: #fff!important;
 }
 h1,h3{
-    color: #fff!important;
+    color: #000!important;
 }
 label{
-    color: #fff!important;
+    color: #000!important;
 }
 textarea{
     width: 400px!important;
     height: 100px!important;
     resize:none;
+}
+header,.continfobox{
+    background: #fff;
+    color: #000;
+}
+.ml10{
+    margin-right: 5px;
+    padding: 10px;
 }
