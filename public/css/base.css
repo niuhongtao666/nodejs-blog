@@ -23,7 +23,7 @@ a{
     text-decoration:none;
 }
 input{
-    width: 400px!important;
+    width: 300px!important;
 }
 h3{
     margin-top: 40px;
@@ -68,4 +68,7 @@ header,.continfobox{
 .ml10{
     margin-right: 5px;
     padding: 10px;
+}
+.textAlignCenter{
+    text-align: center!important;
 }

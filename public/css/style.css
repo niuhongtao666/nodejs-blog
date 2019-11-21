@@ -23,7 +23,7 @@ footer p{
 form{
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
 }
 .loginZone{
     position: fixed;
