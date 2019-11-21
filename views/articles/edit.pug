@@ -1,6 +1,6 @@
 extends ../layout
 block content
-    h1 #{title}
+    h3.textAlignCenter #{title}
     form(method='post',action='/articles/update/'+article.id)
             .form-group
                 label Title:
@@ -11,14 +11,14 @@ block content
             .form-group
                 label Body:
                 textarea.form-control(name='body')=article.body
-            .form-group
-                label images:
+            .form-group.change
+                label.disBlock images:
                 input#filesEdit(type='file', name='file', data-id=article.id)
                 if article.fileName
                     .imgArticleEdit
                         .deleteImgEdit X
                         img#eachEdit(src=article.fileName)
-            .form-group
+            .form-group.change
                 label
                 input#fileNameEdit(type='hidden',name='fileName' value=article.fileName)
             br
