@@ -137,3 +137,21 @@ form{
     /*flex-grow:1*/
 }
 /*文章编辑结束*/
+.newInfo{
+    display: flex;
+    justify-content: left;
+}
+@media (min-width:992px){
+    .change{
+        /*﻿box-sizing: border-box;*/
+        /*padding-left: 25px;*/
+        margin-left: 60px;
+    }
+}
+@media (max-width:576px){
+    .change{
+        /*﻿box-sizing: border-box;*/
+        /*padding-left: 25px;*/
+        margin-left: 24px;
+    }
+}
