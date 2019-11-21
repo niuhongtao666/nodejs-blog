@@ -141,17 +141,20 @@ form{
     display: flex;
     justify-content: left;
 }
+.disBlock{
+    display: block;
+}
 @media (min-width:992px){
     .change{
         /*﻿box-sizing: border-box;*/
         /*padding-left: 25px;*/
-        margin-left: 60px;
+        margin-left: 5px;
     }
 }
 @media (max-width:576px){
     .change{
         /*﻿box-sizing: border-box;*/
         /*padding-left: 25px;*/
-        margin-left: 24px;
+        margin-left: 5px;
     }
 }
