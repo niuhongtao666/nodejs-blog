@@ -16,5 +16,9 @@ let userSchema=new mongoose.Schema({
         type:String,
         required:true
     },
+    beMaster:{
+        type:Boolean,
+        // required:true
+    },
 })
 let User=module.exports=mongoose.model("User",userSchema);

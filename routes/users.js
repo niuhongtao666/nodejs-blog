@@ -58,6 +58,11 @@ router.post('/register',[
                     console.error(err);
                     return;
                 }
+                if(users.name=='牛红涛'){
+                    users.beMaster=true;
+                }else{
+                    users.beMaster=false;
+                }
                 users.password=hash;
                 users.save((err,data)=>{
                     if(err) throw err;

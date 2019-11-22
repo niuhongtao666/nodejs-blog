@@ -29,6 +29,10 @@ app.use(passport.session());
 //passportjs初始化结束
 app.get('*',function(req,res,next){
     res.locals.user=req.user || null;
+    if(req.user){
+        console.log(req.user.beMaster)
+        res.locals.master=req.user.beMaster;
+    }
     next();
 });
 mongoose.connect(config.database,{useNewUrlParser:true});

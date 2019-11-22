@@ -1,13 +1,86 @@
 extends ../layout
 block content
-    h1 #{article.title}
-    h5 writed by #{author}
-    p=article.body
-    if article.fileName
-        .showImg
-          img(src=article.fileName)
-    p （注：登陆后可以编辑自己的文章）
-    hr
-    if user&&user.id==article.author
-      a.btn.btn-primary.mr-2(href='/articles/'+article.id+'/edit') Edit
-      a.btn.btn-danger.delete-article(href='#',data-id=article.id) Delete
+    //h1 #{article.title}
+    //h5 writed by #{author}
+    //p=article.body
+    //if article.fileName
+    //    .showImg
+    //      img(src=article.fileName)
+    //p （注：登陆后可以查看链接）
+    //hr
+    //if user&&user.id==article.author
+    //  a.btn.btn-primary.mr-2(href='/articles/'+article.id+'/edit') Edit
+    //  a.btn.btn-danger.delete-article(href='#',data-id=article.id) Delete
+    #zt.container.m0.bod.top70
+        .col-lg-9.col-md-12.col-sm-12
+            .project
+                .adinfo
+                .project-header
+                    h1 #{article.title}
+                    //p 所属分类：UI-布局
+                    //.row.pd10
+                    //    .f
+                    //        span
+                    //            i.fa.fa-eye
+                    //            |   592
+                    //        span
+                    //            i.fa.fa-heart
+                    //            |   10
+                    //        span(style='border-right: 0;  ')
+                    //            a(href='message22516')
+                    //                i.fa.fa-comment
+                    //                |   查看评论
+                    //                span(style='color:#ff0000;border-right: 0; font: 20px/24px Georgia;') (0)
+                    //    .r.fx
+                    //        .bdsharebuttonbox(data-tag='share_1')
+                    //            a.ttqq(data-cmd='sqq', title='分享到QQ好友')
+                    //            a.ttwx(data-cmd='weixin', href='#')
+                    //            a.ttqzone(data-cmd='qzone')
+                    //            a.ttsina(data-cmd='tsina')
+                    //            a.tthuaban(data-cmd='huaban')
+                    //            a.ttfbook(data-cmd='fbook')
+                    //            #fxcode
+                    //                .f.fxjg 分享到微信朋友圈
+                    //                #fxcolse.r.fxjg
+                    //                    b X
+                    //                canvas(width='175', height='175')
+                    //    .dr
+                .project-content.inad
+                    img.thumbile(src=article.fileName)
+                .alert.cjms(role='alert') #{article.body}
+                .in2
+                    textarea#textareaChange(style='height:200px; width:100%;', placeholder='您有什么想法要说的吗？分享给别人吧！', spellcheck='false')
+                    .r.top10
+                        button#myButton.btn.btn-primary( type='button', data-loading-text='Loading...', autocomplete='off')
+                            | 发表评论
+                    .dr
+        .col-lg-2.visible-lg(style='width:200px')
+            .affd.affix-top(style='width:200px')
+                ul.zuo.f
+                    h6 提供者：#{author}
+                    //a(href='../mem755927')
+                    //    img(src=article.fileName)
+                    //.zuox.f
+                    //    h4 静-静
+                    //    i.fa.fa-map-marker
+                    //    span 云南省昆明市
+                    //button.btn.btn-z.top20(type='button', onclick='zuozhe()')
+                    //    i.fa.fa-plus-circle
+                    //    |  关注作者
+                    //    span (0)
+                    //button.btn.btn-z.top10(type='button', onclick='sc()')
+                    //    i.fa.fa-heart-o
+                    //    |  收藏此插件
+                    //    span (10)
+                    //a#scs.btn.btn-danger.top10(href='shoucangadd.aspx', style='display:none')
+                    //    | 收藏插件以超出上限！
+                    //    br
+                    //    b  点击增加上限数
+                    //.df
+                .df
+            //ul.list-group(style='margin-bottom:10px')
+            //    .input-group
+            //        input#searchtxt.form-control(type='text', placeholder='搜索插件..', style='height: 34px; margin-top: 8px;')
+            //        span.input-group-btn
+            //            button#seobut.btn.btn-default(type='button', style='border-top-left-radius: 0px; border-bottom-left-radius: 0px; border-left-width: 0px;')
+            //                i.fa.fa-search
