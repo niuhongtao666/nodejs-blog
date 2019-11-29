@@ -97,4 +97,28 @@ $(function(){
         $('#filesEdit').val('');
         $('#eachEdit').attr('src','');
     })
+    $('#myButton').on('click',function () {
+        var comment=$('#textareaChange').val();
+        var id=$('#articleId').val();
+        // alert(comment);
+        // alert(id)
+       $.ajax({
+            url: '/articles/comment/'+id,//请求路径
+            type: 'POST',
+            data: {comment:comment},
+            success: function(data){
+                // alert(data.code)
+                // alert(data.data)
+                if(200 === data.code) {
+                    window.location.reload();
+                } else {
+                    // $('#result').html("上传失败！");
+                }
+                // console.log(2)
+            },
+            error: function(){
+                // $("#result").html("与服务器通信发生错误");
+            }
+        });
+    })
 });

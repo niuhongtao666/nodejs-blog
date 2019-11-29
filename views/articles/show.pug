@@ -47,13 +47,24 @@ block content
                     //    .dr
                 .project-content.inad
                     img.thumbile(src=article.fileName)
-                .alert.cjms(role='alert') #{article.body}
-                .in2
-                    textarea#textareaChange(style='height:200px; width:100%;', placeholder='您有什么想法要说的吗？分享给别人吧！', spellcheck='false')
-                    .r.top10
-                        button#myButton.btn.btn-primary( type='button', data-loading-text='Loading...', autocomplete='off')
-                            | 发表评论
-                    .dr
+                .alert.cjms.wdb(role='alert') #{article.body}
+                h5
+                    |
+                    span.label.label-default.comment 登录后参与评论
+                //.alert.cjms.wdb(role='alert') #{article.comments[0].author}
+                ul.list-group
+                    each comment in article.comments
+                        li.list-group-item
+                            span.fl #{comment.myComment}
+                            span.fr #{comment.author}
+                if user
+                    .in2
+                        textarea#textareaChange(style='height:200px; width:100%;', placeholder='您有什么想法要说的吗？分享给别人吧！', spellcheck='false')
+                        input#articleId(type='hidden',name='articleId',value=article.id)
+                        .r.top10
+                            button#myButton.btn.btn-primary( type='button', data-loading-text='Loading...', autocomplete='off')
+                                | 发表评论
+                        .dr
         .col-lg-2.visible-lg(style='width:200px')
             .affd.affix-top(style='width:200px')
                 ul.zuo.f

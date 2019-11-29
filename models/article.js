@@ -20,5 +20,8 @@ let articleSchema=new mongoose.Schema({
         type:String,
         required:true
     },
+    comments:{
+        type:Array,
+    }
 })
 let Article=module.exports=mongoose.model("Article",articleSchema);

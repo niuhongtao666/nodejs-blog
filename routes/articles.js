@@ -37,6 +37,7 @@ router.get('/:id/edit',(req,res)=>{
         }
     });
 });
+
 router.post('/uploadEdit/:id', multer({
     //设置文件存储路径
     dest: 'public/upload'   //upload文件如果不存在则会自己创建一个。
@@ -191,6 +192,33 @@ router.delete('/delete/:id',(req,res)=>{
         }
     });
 
+});
+router.post('/comment/:id',(req,res)=>{
+    var com=req.body;
+    var obj={
+        myComment:com.comment,
+        author:req.user.name
+    };
+    var commentsArray;
+    Article.findById(req.params.id,function(err,article){
+        if(article.comments.length){
+            commentsArray=article.comments;
+        }else{
+            commentsArray=[];
+        }
+        commentsArray.unshift(obj);
+        Article.updateOne({_id:req.params.id}, {$set: {comments:commentsArray}},(err,article) =>{
+            if (!err) {
+                // console.log(article)
+                res.json({
+                    code : 200,
+                    data : obj
+                })
+            } else {
+                console.log(err)
+            }
+        })
+    });
 });
 function ensureAuthenticated(req,res,next){
     if(req.isAuthenticated()){

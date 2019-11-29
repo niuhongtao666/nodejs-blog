@@ -84,4 +84,12 @@ header,.continfobox{
         display: block!important;
     }
 }
-
+.wdb{
+    word-break: break-all;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
