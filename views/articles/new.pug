@@ -12,13 +12,53 @@ block content
         .form-group
             label Body:
             textarea.form-control(name='body')
+        .form-group
+            label p1:
+            textarea.form-control(name='p1')
+        .form-group
+            label p2:
+            textarea.form-control(name='p2')
+        .form-group
+            label p3:
+            textarea.form-control(name='p3')
+        .form-group
+            label p4:
+            textarea.form-control(name='p4')
+        .form-group
+            label p5:
+            textarea.form-control(name='p5')
         .form-group.change
             label.disBlock images:
-            input#files(type='file', name='file',)
-            .imgArticle
-                .deleteImg X
-                img#each(src='')
-        .form-group.change
+            input#files(type='file', name='file',multiple)
+            .images
+                .imgArticle.imgArticle0
+                    //.deleteImg X
+                    img#each(src='')
+                .imgArticle.imgArticle1
+                    //.deleteImg X
+                    img#each1(src='')
+                .imgArticle.imgArticle2
+                    //.deleteImg X
+                    img#each2(src='')
+                .imgArticle.imgArticle3
+                    //.deleteImg X
+                    img#each3(src='')
+                .imgArticle.imgArticle4
+                    //.deleteImg X
+                    img#each4(src='')
+        .form-group.change#change
             label
             input#fileName(type='hidden',name='fileName')
+        .form-group.change#change1.cha
+            label
+            input#fileName1(type='hidden',name='fileName1')
+        .form-group.change#change2.cha
+            label
+            input#fileName2(type='hidden',name='fileName2')
+        .form-group.change#change3.cha
+            label
+            input#fileName3(type='hidden',name='fileName3')
+        .form-group.change#change4.cha
+            label
+            input#fileName4(type='hidden',name='fileName4')
         input.btn.btn-primary(type='submit',value='submit')

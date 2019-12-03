@@ -75,7 +75,7 @@ form{
     background: red;
     cursor: pointer;
 }
-.imgArticle #each{
+.imgArticle #each,.imgArticle #each1,.imgArticle #each2,.imgArticle #each3,.imgArticle #each4{
     width: 150px;
     height: 150px;
     display: inline-block;

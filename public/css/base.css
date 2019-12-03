@@ -99,3 +99,9 @@ header,.continfobox{
 .pt6{
     padding-top: 6px;
 }
+.cha{
+    display: none;
+}
+.bl0{
+    border-left:none !important;
+}

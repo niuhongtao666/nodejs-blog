@@ -91,44 +91,64 @@ router.post('/uploadEdit/:id', multer({
 router.post('/upload', multer({
     //设置文件存储路径
     dest: 'public/upload'   //upload文件如果不存在则会自己创建一个。
-}).single('file'), function (req, res, next) {
+}).array('file', 5), function (req, res, next) {
+    console.log(req.files)
     // var url = 'public/' + req.file.filename
-    if (req.file.length === 0) {  //判断一下文件是否存在，也可以在前端代码中进行判断。
-        res.render("error", {message: "上传文件不能为空！"});
-        return
-    } else {
-        let file = req.file;
-        let fileInfo = {};
-        console.log(file);
-        fs.renameSync('./public/upload/' + file.filename, './public/upload/' + file.originalname);//这里修改文件名字，比较随意。
-        // 获取文件信息
-        fileInfo.mimetype = file.mimetype;
-        fileInfo.originalname = file.originalname;
-        fileInfo.size = file.size;
-        fileInfo.path = file.path;
-        var pathNew='/upload/'+fileInfo.originalname;
-        // 设置响应类型及编码
-        /* Article.findById(req.params.id,(err,article)=>{
-           User.findById(article.author,function(err,user){
-                res.render(
-                    'articles/show',
-                    {
-                        article:article,
-                        author:user.name
-                    }
-                );
-            })
-            article.fileName=pathNew
-        });*/
-        res.set({
-            'content-type': 'application/json; charset=utf-8'
-        });
-        res.json({
-            code : 200,
-            data : pathNew
-        })
-        // res.end("上传成功！");
-    }
+   if (req.files.length === 0) {  //判断一下文件是否存在，也可以在前端代码中进行判断。
+      res.render("error", {message: "上传文件不能为空！"});
+      return
+  } else {
+       /* let file = req.file;
+       console.log(file);
+     let file = req.file;
+       let fileInfo = {};
+       console.log(file);
+       fs.renameSync('./public/upload/' + file.filename, './public/upload/' + file.originalname);//这里修改文件名字，比较随意。
+       // 获取文件信息
+       fileInfo.mimetype = file.mimetype;
+       fileInfo.originalname = file.originalname;
+       fileInfo.size = file.size;
+       fileInfo.path = file.path;
+       var pathNew='/upload/'+fileInfo.originalname;
+       // 设置响应类型及编码
+       Article.findById(req.params.id,(err,article)=>{
+          User.findById(article.author,function(err,user){
+               res.render(
+                   'articles/show',
+                   {
+                       article:article,
+                       author:user.name
+                   }
+               );
+           })
+           article.fileName=pathNew
+       });
+       res.set({
+           'content-type': 'application/json; charset=utf-8'
+       });
+       res.json({
+           code : 200,
+           data : pathNew
+       })*/
+      // res.end("上传成功！");
+       let files = req.files;
+       let images=[];
+       files.forEach(function (item) {
+           let fileInfo = {};
+           fs.renameSync('./public/upload/' + item.filename, './public/upload/' + item.originalname);//这里修改文件名字，比较随意。
+           fileInfo.mimetype = item.mimetype;
+           fileInfo.originalname = item.originalname;
+           fileInfo.size = item.size;
+           fileInfo.path = item.path;
+           fileInfo.pathNew='/upload/'+fileInfo.originalname;
+           images.push(fileInfo);
+       })
+       res.json({
+           code : 200,
+           data : images
+       })
+       console.log(images)
+  }
 });
 router.post('/create',[
     check('title').isLength({min:1}).withMessage('Title is required'),
@@ -141,6 +161,7 @@ router.post('/create',[
         console.log(errors.array());
         res.render('articles/new',{errors:errors.array(),title:'Add Article'});
     }else{
+        console.log(req.body)
         /*let file = req.file;
         let fileInfo = {};
         console.log(file);

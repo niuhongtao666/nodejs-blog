@@ -1,3 +1,6 @@
 .comment{
     margin-left: 22px;
 }
+.col-sm-12 .thumbile{
+    height: 300px!important;
+}
