@@ -12,7 +12,7 @@ block content
     #zt.container-fluid.m
         .container.m0.bod
             each article in articles
-                .col-lg-4.col-md-3.col-sm-4
+                .col-lg-4.col-md-3.col-sm-4.pb2.pt6
                     a(href='/articles/'+article.id)
                         if article.fileName
                             img(src=article.fileName)
@@ -22,7 +22,8 @@ block content
                         a(href='/articles/'+article.id, target='_blank')
                             //h4 Drag拖动选择插件(原创)
                         h5=article.title
-                        small=article.body
+                        p.des
+                            small=article.body
                     //.cover-fields
                     //    i.fa.fa-list-ul
                     //    | 拖和放,选择框

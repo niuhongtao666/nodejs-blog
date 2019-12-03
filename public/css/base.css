@@ -93,3 +93,9 @@ header,.continfobox{
 .fr{
     float: right;
 }
+.pb2{
+    padding-bottom: 2px;
+}
+.pt6{
+    padding-top: 6px;
+}
