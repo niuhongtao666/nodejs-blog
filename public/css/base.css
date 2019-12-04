@@ -10,6 +10,8 @@ html,body{
     /*background: url("../images/snow.jpg") no-repeat center center;*/
     /*background-size: 100% 100%;*/
     color: #000;
+    box-sizing: border-box;
+    padding-top: 60px;
 }
 hr{
     border-top: 1px solid #fff!important;
