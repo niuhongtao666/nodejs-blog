@@ -70,6 +70,24 @@ $(function(){
                             $('#fileName4').val(images[4]['pathNew'])
                             $('#each4').attr('src',img);
                         }
+                        if(images[5]){
+                            $('.imgArticle5').css('display','block');
+                            var img=window.location.origin+images[5]['pathNew'];
+                            $('#fileName5').val(images[5]['pathNew'])
+                            $('#each5').attr('src',img);
+                        }
+                        if(images[6]){
+                            $('.imgArticle6').css('display','block');
+                            var img=window.location.origin+images[6]['pathNew'];
+                            $('#fileName6').val(images[6]['pathNew'])
+                            $('#each6').attr('src',img);
+                        }
+                        if(images[7]){
+                            $('.imgArticle7').css('display','block');
+                            var img=window.location.origin+images[7]['pathNew'];
+                            $('#fileName7').val(images[7]['pathNew'])
+                            $('#each7').attr('src',img);
+                        }
                     }
                 } else {
                 }

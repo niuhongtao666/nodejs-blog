@@ -27,6 +27,18 @@ block content
         .form-group
             label p5:
             textarea.form-control(name='p5')
+        .form-group
+            label p6:
+            textarea.form-control(name='p6')
+        .form-group
+            label p7:
+            textarea.form-control(name='p7')
+        .form-group
+            label p8:
+            textarea.form-control(name='p8')
+        .form-group
+            label link:
+            textarea.form-control(name='link')
         .form-group.change
             label.disBlock images:
             input#files(type='file', name='file',multiple)
@@ -46,6 +58,15 @@ block content
                 .imgArticle.imgArticle4
                     //.deleteImg X
                     img#each4(src='')
+                .imgArticle.imgArticle5
+                    //.deleteImg X
+                    img#each5(src='')
+                .imgArticle.imgArticle6
+                    //.deleteImg X
+                    img#each6(src='')
+                .imgArticle.imgArticle7
+                    //.deleteImg X
+                    img#each7(src='')
         .form-group.change#change
             label
             input#fileName(type='hidden',name='fileName')
@@ -61,4 +82,13 @@ block content
         .form-group.change#change4.cha
             label
             input#fileName4(type='hidden',name='fileName4')
+        .form-group.change#change5.cha
+            label
+            input#fileName5(type='hidden',name='fileName5')
+        .form-group.change#change6.cha
+            label
+            input#fileName6(type='hidden',name='fileName6')
+        .form-group.change#change7.cha
+            label
+            input#fileName7(type='hidden',name='fileName7')
         input.btn.btn-primary(type='submit',value='submit')

@@ -75,7 +75,7 @@ form{
     background: red;
     cursor: pointer;
 }
-.imgArticle #each,.imgArticle #each1,.imgArticle #each2,.imgArticle #each3,.imgArticle #each4{
+.imgArticle #each,.imgArticle #each1,.imgArticle #each2,.imgArticle #each3,.imgArticle #each4,.imgArticle #each5,.imgArticle #each6,.imgArticle #each7{
     width: 150px;
     height: 150px;
     display: inline-block;
@@ -150,6 +150,9 @@ form{
         /*padding-left: 25px;*/
         margin-left: 5px;
     }
+    .color0{
+        color: #000000 !important;
+    }
 }
 @media (max-width:576px){
     .change{
@@ -157,4 +160,14 @@ form{
         /*padding-left: 25px;*/
         margin-left: 5px;
     }
+}
+.color0{
+    color: orange !important;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    z-index: 1000;
 }

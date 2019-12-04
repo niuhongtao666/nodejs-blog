@@ -28,6 +28,18 @@ let articleSchema=new mongoose.Schema({
         type:String,
         // required:true
     },
+    fileName5:{
+        type:String,
+        // required:true
+    },
+    fileName6:{
+        type:String,
+        // required:true
+    },
+    fileName7:{
+        type:String,
+        // required:true
+    },
     // file:{
     //     type:String,
     //     // required:true
@@ -49,6 +61,18 @@ let articleSchema=new mongoose.Schema({
         type:String,
     },
     p5:{
+        type:String,
+    },
+    p6:{
+        type:String,
+    },
+    p7:{
+        type:String,
+    },
+    p8:{
+        type:String,
+    },
+    link:{
         type:String,
     },
     comments:{

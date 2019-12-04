@@ -91,7 +91,7 @@ router.post('/uploadEdit/:id', multer({
 router.post('/upload', multer({
     //设置文件存储路径
     dest: 'public/upload'   //upload文件如果不存在则会自己创建一个。
-}).array('file', 5), function (req, res, next) {
+}).array('file', 8), function (req, res, next) {
     console.log(req.files)
     // var url = 'public/' + req.file.filename
    if (req.files.length === 0) {  //判断一下文件是否存在，也可以在前端代码中进行判断。

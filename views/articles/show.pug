@@ -70,8 +70,28 @@ block content
                         img.thumbile(src=article.fileName4)
                 if article.fileName4&&article.p5
                     .alert.cjms.wdb.bl0(role='alert') #{article.p5}
+                if article.fileName5
+                    .project-content.inad
+                        img.thumbile(src=article.fileName5)
+                if article.fileName5 && article.p6
+                    .alert.cjms.wdb.bl0(role='alert') #{article.p6}
+                if article.fileName6
+                    .project-content.inad
+                        img.thumbile(src=article.fileName6)
+                if article.fileName6 && article.p7
+                    .alert.cjms.wdb.bl0(role='alert') #{article.p7}
+                if article.fileName7
+                    .project-content.inad
+                        img.thumbile(src=article.fileName7)
+                if article.fileName7 && article.p8
+                    .alert.cjms.wdb.bl0(role='alert') #{article.p8}
                 if article.body
                 .alert.cjms.wdb(role='alert') #{article.body}
+                //a.color0(href='../mem755927')
+                //                       | 前往购买
+                h5
+                    |
+                    a.label.label-default.comment.color0(href=article.link) 前往购买
                 h5
                     |
                     span.label.label-default.comment 登录后参与评论
@@ -92,9 +112,9 @@ block content
         .col-lg-2.visible-lg(style='width:200px')
             .affd.affix-top(style='width:200px')
                 ul.zuo.f
-                    h6 提供者：#{author}
-                    //a(href='../mem755927')
-                    //    img(src=article.fileName)
+                    h6 上传者：#{author}
+                    //a.color0(href='../mem755927')
+                    //    | 前往购买
                     //.zuox.f
                     //    h4 静-静
                     //    i.fa.fa-map-marker
