@@ -34,20 +34,6 @@ h3{
 li{
     list-style: none;
 }
-footer{
-    position: fixed;
-    bottom: 0px;
-    left: 50%;
-    line-height: 60px;
-    text-align: center;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    width: 100%;
-    border-top: 1px solid #fff;
-}
 .bg-dark{
     background:#000!important;
     color: #fff!important;
@@ -85,6 +71,7 @@ header,.continfobox{
     .visible-lg {
         display: block!important;
     }
+
 }
 .wdb{
     word-break: break-all;
@@ -122,4 +109,54 @@ h5{
     /*因为代码环境的关系-webkit-box-orient被过滤掉了 autoprefixer 这个关键字可以免除被过滤的动作*/
     word-wrap:break-word;
     word-break:break-all;
+}
+@media (min-width: 768px){
+    .footOne{
+        display: block;
+        height: 86px;
+        font-size: 12px;
+        position: fixed;
+        bottom: 0px;
+        /*left: 50%;*/
+        left: 0px;
+        line-height:22px;
+        text-align: center;
+        /*transform: translateX(-50%);*/
+        /*-webkit-transform: translateX(-50%);*/
+        /*-ms-transform: translateX(-50%);*/
+        /*-moz-transform: translateX(-50%);*/
+        /*-o-transform: translateX(-50%);*/
+        width: 100%;
+        border-top: 1px solid #fff;
+        background:#000!important;
+        color: #fff;
+        padding: 10px 0px;
+    }
+    .footTwo{
+        display: none;
+    }
+}
+@media (max-width: 768px){
+    .footOne {
+        display: none;
+    }
+    .footTwo{
+        height: 87px;
+        font-size: 12px;
+        position: fixed;
+        bottom: 0px;
+        /*left: 50%;*/
+        left: 0px;
+        line-height: 29px;
+        text-align: center;
+        /*transform: translateX(-50%);*/
+        /*-webkit-transform: translateX(-50%);*/
+        /*-ms-transform: translateX(-50%);*/
+        /*-moz-transform: translateX(-50%);*/
+        /*-o-transform: translateX(-50%);*/
+        width: 100%;
+        border-top: 1px solid #fff;
+        background:#000!important;
+        color: #fff;
+    }
 }
