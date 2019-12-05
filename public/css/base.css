@@ -135,8 +135,8 @@ h5{
     .footTwo{
         display: none;
     }
-    body{
-        padding-bottom: 100px!important;
+    .newInfo{
+        margin-bottom: 100px!important;
     }
 }
 @media (max-width: 768px){
@@ -162,7 +162,7 @@ h5{
         background:#000!important;
         color: #fff;
     }
-    body{
-        padding-bottom: 100px!important;
+    .newInfo{
+        margin-bottom: 100px!important;
     }
 }
