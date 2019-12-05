@@ -135,6 +135,9 @@ h5{
     .footTwo{
         display: none;
     }
+    body{
+        padding-bottom: 100px!important;
+    }
 }
 @media (max-width: 768px){
     .footOne {
@@ -158,5 +161,8 @@ h5{
         border-top: 1px solid #fff;
         background:#000!important;
         color: #fff;
+    }
+    body{
+        padding-bottom: 100px!important;
     }
 }
