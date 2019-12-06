@@ -9,6 +9,18 @@ block content
     //          a(href='/articles/'+article.id)=article.title
     //else
     //    h5 请添加文章
+    .category
+        ul.amimals.mt0
+            li.data1.textAlignCenter(data-id=0)
+                | 宠物狗🐶
+            li.data2.textAlignCenter(data-id=1)
+                | 宠物猫🐱
+            li.data3.textAlignCenter(data-id=2)
+                | 宠物蛇🐍
+            li.data4.textAlignCenter(data-id=3)
+                | 宠物猪🐷
+    .categoryInner
+        ul.amimalsInner
     #zt.container-fluid.m
         .container.m0.bod
             each article in articles

@@ -11,12 +11,13 @@ html(lang="en")
     link(rel='stylesheet',href='/css/font.css')
     link(rel='stylesheet',href='/css/base.css')
     link(rel='stylesheet',href='/css/style.css')
+    link(rel='stylesheet',href='/css/layout.css')
     link(rel='stylesheet',href='/css/index.css')
     link(rel='stylesheet',href='/css/main.css')
     link(rel='stylesheet',href='/css/show.css')
     link(rel='stylesheet',href='/css/new.css')
   body
-    nav.navbar.navbar-expand-md.navbar-dark.bg-dark.mb-2
+    nav.navbar.navbar-expand-md.navbar-dark.bg-dark.mb-2.mt0
       .container
         a.navbar-brand(href='javascript:void(0);') 🌟皇家宠物🌟
         button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarsExample04', aria-controls='navbarsExample04', aria-expanded='false', aria-label='Toggle navigation')
@@ -29,7 +30,10 @@ html(lang="en")
                 span.sr-only (current)
             if master
               li.nav-item
-                a.nav-link(href='/articles/new') 添加
+                a.nav-link(href='/articles/new') 添加文章
+            if master
+              li.nav-item
+                a.nav-link(href='/articles/addCategory') 添加分类
           ul.navbar-nav.navbar-right
             if user
               li.nav-item  
@@ -68,5 +72,7 @@ html(lang="en")
     script(src='/bower_components/jquery/dist/jquery.min.js')
     script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
     script(src='/js/main.js')
+    script(src='/js/layout.js')
+    script(src='/js/addCategory.js')
     //script(src='/js/snowy.js')
     //script(src='/js/Snow.js')

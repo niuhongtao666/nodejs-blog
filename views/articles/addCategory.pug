@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+    h3.textAlignCenter #{title}
+    form.newInfo(method='post',action='/articles/addCategorySubmit')
+        .form-group.w300
+            label.mr10 分类:
+            select(name="cateId")
+                option(value=0) 宠物狗
+                option(value=1) 宠物猫
+                option(value=2) 宠物蛇
+                option(value=3) 宠物猪
+        .form-group
+            label 名称:
+            input.form-control(type='text',name='name')
+        .form-group.change
+            label.disBlock images:
+            input#filesCategory(type='file', name='file')
+            .images
+                .imgArticle.imgArticle0.categoryPicShow
+                    .deleteImg X
+                    img#each.categoryPic(src='')
+        .form-group.change#change
+            label
+            input#fileName(type='hidden',name='fileName')
+        input.btn.btn-primary(type='submit',value='submit')

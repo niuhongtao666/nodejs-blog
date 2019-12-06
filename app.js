@@ -5,6 +5,7 @@ const app=express();
 const bodyParser=require('body-parser');
 const { check, validationResult } = require('express-validator/check');
 let Article=require('./models/article.js');
+let Category=require('./models/category.js');
 const session=require('express-session');
 const passport=require('passport'); 
 const config=require('./config/database');
@@ -44,10 +45,29 @@ db.on('error',function(err){
     if(err) throw err;
 });
 app.get('/',(req,res)=>{
+    // res.render('users/login')
+    // var cate=Category;
+    // cate.find({cateId:"0"},(err,categories)=>{
+    //     if(err) throw err;
+    //     console.log(categories)
+    //     Article.find({},(err,articles)=>{
+    //         if(err) throw err;
+    //         res.render('articles/index',
+    //             {
+    //                 articles:articles,
+    //                 categories:categories
+    //             }
+    //         );
+    //     })
+    // })
     Article.find({},(err,articles)=>{
-        if(err) throw err;
-        res.render('articles/index',{articles:articles});
-    })
+                if(err) throw err;
+                res.render('articles/index',
+                    {
+                        articles:articles,
+                    }
+                );
+            })
 });
 let articles=require('./routes/articles');
 let users=require('./routes/users');

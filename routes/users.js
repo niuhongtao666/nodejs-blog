@@ -66,7 +66,7 @@ router.post('/register',[
                 users.password=hash;
                 users.save((err,data)=>{
                     if(err) throw err;
-                    req.flash("success", "Register and Login");
+                    // req.flash("success", "Register and Login");
                     res.redirect('/users/login');
                 })
             });
@@ -81,7 +81,7 @@ router.post('/login',(req,res,next)=>{
         {   successRedirect: '/',
             failureRedirect: '/users/login',
             failureFlash: true ,
-            successFlash:'Welcome!'
+            successFlash:''
         }
     )(req,res,next)
 });
