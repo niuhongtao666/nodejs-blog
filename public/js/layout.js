@@ -45,7 +45,7 @@ $(function () {
 
                     })
                     $('.categoryInner').css('display','block');
-                    $('.amimalsInner').css('display','block');
+                    $('.amimalsInner').css('display','flex');
                     $('.noCate').css('display','none');
                 }else{
                     $('.categoryInner').css('display','none');
