@@ -19,10 +19,12 @@ block content
                 | 宠物蛇🐍
             li.data4.textAlignCenter(data-id=3)
                 | 宠物猪🐷
-    .categoryInner
+    .categoryInner.hideCate
         ul.amimalsInner
-    .noCate
+        .closeSizeFirst
+    .noCate.hideCate.hideCateNo
         | 暂无分类
+        .closeSizeFirstNo
     if articles.length
         #zt.container-fluid.m
             .container.m0.bod

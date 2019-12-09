@@ -23,6 +23,14 @@ $(function () {
             }
     }
     /*动物点击类名处理结束*/
+    /*点击隐藏分类开始*/
+    $('.hideCate .closeSizeFirst').on('click',function () {
+        $('.categoryInner').css('display','none')
+    })
+    $('.hideCateNo .closeSizeFirstNo').on('click',function () {
+        $('.noCate').css('display','none')
+    })
+    /*点击隐藏分类结束*/
     //动物点击方法封装
     function getAnimalList(id) {
         $.ajax({
