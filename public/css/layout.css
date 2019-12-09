@@ -218,7 +218,7 @@
         border: 15px solid orange;
         position: absolute;
         left: 50%;
-        top: 120px;
+        bottom: -30px;
         border-bottom: 15px solid transparent;
         border-right: 15px solid transparent;
         border-left: 15px solid transparent;
