@@ -88,6 +88,16 @@
         padding-left: 20px;
         display: none;
     }
+    .footer{
+        width: 100%;
+        height: 35px;
+        background: url('../images/grass_retina4.png') no-repeat center center;
+        background-size: cover;
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        z-index: 100;
+    }
 }
 @media (min-width: 768px) {
     .animalActive{
@@ -161,5 +171,15 @@
         box-sizing: border-box;
         padding-left: 20px;
         display: none;
+    }
+    .footer{
+        width: 100%;
+        height: 80px;
+        background: url('../images/grass_retina4.png') no-repeat center center;
+        background-size: cover;
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        z-index: 100;
     }
 }

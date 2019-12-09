@@ -23,21 +23,22 @@ block content
         ul.amimalsInner
     .noCate
         | 暂无分类
-    #zt.container-fluid.m
-        .container.m0.bod
-            each article in articles
-                .col-lg-4.col-md-3.col-sm-4.pb2.pt6
-                    a(href='/articles/'+article.id)
-                        if article.fileName
-                            img(src=article.fileName)
-                        else
-                            img(src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1574337602415&di=cc62839004e41a78a2916186dd8dc57d&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fbdaca9a07e1a8947c00c2f826ebf848750927aa24963-cATwbg_fw658',)
-                    .cover-info
-                        a(href='/articles/'+article.id, target='_blank')
-                            //h4 Drag拖动选择插件(原创)
-                        h5=article.title
-                        p.des
-                            small=article.body
+    if articles.length
+        #zt.container-fluid.m
+            .container.m0.bod
+                each article in articles
+                    .col-lg-4.col-md-3.col-sm-4.pb2.pt6
+                        a(href='/articles/'+article.id)
+                            if article.fileName
+                                img(src=article.fileName)
+                            else
+                                img(src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1574337602415&di=cc62839004e41a78a2916186dd8dc57d&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fbdaca9a07e1a8947c00c2f826ebf848750927aa24963-cATwbg_fw658',)
+                        .cover-info
+                            a(href='/articles/'+article.id, target='_blank')
+                                //h4 Drag拖动选择插件(原创)
+                            h5=article.title
+                            p.des
+                                small=article.body
                     //.cover-fields
                     //    i.fa.fa-list-ul
                     //    | 拖和放,选择框

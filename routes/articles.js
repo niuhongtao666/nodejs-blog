@@ -257,7 +257,7 @@ router.post('/create',[
         articles.author=req.user._id;
         articles.save((err,data)=>{
             if(err) throw err;
-            req.flash("success", "Artticle Add");
+            // req.flash("success", "Artticle Add");
             res.redirect('/');
         })
     }
