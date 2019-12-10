@@ -56,6 +56,11 @@
         position: relative;
         cursor: pointer;
     }
+    .categoryInner .amimalsInner li a{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
     .categoryInner .amimalsInner li img{
         height: 80px;
         width: 80px;
@@ -169,6 +174,11 @@
         margin-right: 30px;
         position: relative;
         cursor: pointer;
+    }
+    .categoryInner .amimalsInner li a{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
     }
     .categoryInner .amimalsInner li img{
         height: 80px;

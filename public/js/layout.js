@@ -43,11 +43,15 @@ $(function () {
                     data.data.forEach(function (item) {
                         var imgurl=window.location.origin+item.fileName;
                         var name=item.name;
+                        var id=item._id;
+                        var link="/articles/cateDetail/"+id
                         console.log(imgurl)
                         $('.amimalsInner').append(`
                         <li>
-                            <img src="${imgurl}">
-                            <p>${name}</p>
+                            <a href=${link}>
+                             <img src="${imgurl}">
+                             <p>${name}</p>
+                            </a>
                         </li> 
                     `);
 

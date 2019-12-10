@@ -1,0 +1,31 @@
+extends ../layout
+block content
+    #zt.container.m0.bod.top40
+        .col-lg-3.col-md-12.col-xs-12.col-sm-12.leftSideImg.leftPic
+            img(src=categories.fileName)
+        .col-lg-8.col-md-12.col-xs-12.col-sm-12.rightContent
+            .animalDescribe
+                if categories.name
+                    .title
+                        | #{categories.name}
+                if categories.describe
+                    .content
+                        | #{categories.describe}
+            if categories.shape
+                .animalDescribe
+                     .title
+                         | 宠物的形态特征
+                     .content
+                         | #{categories.shape}
+            if categories.feed
+                .animalDescribe
+                    .title
+                        | 宠物的喂食要点
+                    .content
+                        | #{categories.feed}
+            if categories.environment
+                .animalDescribe
+                    .title
+                        | 宠物的生活环境
+                    .content
+                        | #{categories.environment}

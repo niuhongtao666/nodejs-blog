@@ -7,6 +7,18 @@ let userSchema=new mongoose.Schema({
     name:{
         type:String,
     },
+    describe:{
+        type:String,
+    },
+    shape:{
+        type:String,
+    },
+    feed:{
+        type:String,
+    },
+    environment:{
+        type:String
+    },
     fileName:{
         type:String,
     },

@@ -10,10 +10,26 @@ let router=express.Router();
 router.get('/new',ensureAuthenticated,(req,res)=>{
     res.render('articles/new',{title:'Add Article'});
 });
+router.get('/attributes',ensureAuthenticated,(req,res)=>{
+    res.render('articles/attributes',{title:'详情信息'});
+});
 router.get('/addCategory',ensureAuthenticated,(req,res)=>{
     res.render('articles/addCategory',{title:'添加分类'});
 });
 router.get('/:id',(req,res)=>{
+    Article.findById(req.params.id,(err,article)=>{
+        User.findById(article.author,function(err,user){
+            res.render(
+                'articles/show',
+                {
+                    article:article,
+                    author:user.name
+                }
+            );
+        })
+    });
+});
+router.get('/:cateId',(req,res)=>{
     Article.findById(req.params.id,(err,article)=>{
         User.findById(article.author,function(err,user){
             res.render(
@@ -268,6 +284,20 @@ router.post('/update/:id',(req,res)=>{
         if(err) throw err;
         req.flash("success", "Artticle Update");
         res.redirect('/');
+    })
+});
+router.get('/cateDetail/:id',(req,res)=>{
+    let query={_id:req.params.id};
+    Category.find(query,(err,category)=>{
+        if(err) throw err;
+        // req.flash("success", "Artticle Update");
+        console.log(category)
+        res.render(
+            'articles/attributes',
+            {
+                categories:category[0],
+            }
+        );
     })
 });
 router.post('/getCate/:cateId',(req,res)=>{
