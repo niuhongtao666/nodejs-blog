@@ -22,7 +22,8 @@ block content
                     .title
                         | 宠物的喂食要点
                     .content
-                        | #{categories.feed}
+                        each fee in categories.feed
+                            p=fee
             if categories.environment
                 .animalDescribe
                     .title
