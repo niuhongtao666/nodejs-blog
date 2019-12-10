@@ -1,8 +1,6 @@
 
 @media (min-width: 768px) {
-    /*.container{*/
-        /*margin-top: 50px;*/
-    /*}*/
+
     .leftSideImg{
         height: 300px;
     }
@@ -19,7 +17,7 @@
         right: 0px;
     }
     .rightContent{
-        height:600px;
+        /*height:600px;*/
         box-sizing: border-box;
         padding: 0px !important;
     }
@@ -69,7 +67,7 @@
         right: 0px;
     }
     .rightContent{
-        height:500px;
+        /*height:500px;*/
         box-sizing: border-box;
         padding: 0px !important;
     }
