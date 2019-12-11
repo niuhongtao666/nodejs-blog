@@ -138,6 +138,9 @@ h5{
     .newInfo{
         margin-bottom: 100px!important;
     }
+    .mt30{
+        margin-top: 30px;
+    }
 }
 @media (max-width: 768px){
     .footOne {
@@ -180,5 +183,8 @@ h5{
 }
 .top40{
     margin-top: 40px;
+}
+.mt20{
+    margin-top: 20px;
 }
 

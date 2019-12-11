@@ -6,3 +6,47 @@
 .des{
     height: 40px;
 }
+@media (min-width: 768px){
+    .videoLeft{
+        position: relative;
+        height: 400px;
+    }
+    .videoLeft video{
+        width: 100%;
+        height: 380px;
+        position: absolute;
+        left:0px;
+        top:0px;
+        box-sizing: border-box;
+        padding:10px;
+    }
+    .videoRight{
+        height: 380px;
+        background: #fff;
+        box-sizing: border-box;
+        padding:10px;
+        /*background: rgb(251,244,204)!important;*/
+    }
+}
+@media (max-width: 768px){
+    .videoLeft{
+        position: relative;
+        height: 200px;
+    }
+    .videoLeft video{
+        width: 100%;
+        height: 180px;
+        position: absolute;
+        left:0px;
+        top:0px;
+        box-sizing: border-box;
+        padding:10px;
+    }
+    .videoRight{
+        height: 200px;
+        background: #fff;
+        box-sizing: border-box;
+        padding:10px;
+        /*background: rgb(251,244,204)!important;*/
+    }
+}
