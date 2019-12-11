@@ -14,7 +14,7 @@ let userSchema=new mongoose.Schema({
         type:String,
     },
     feed:{
-        type:String,
+        type:Array,
     },
     environment:{
         type:String

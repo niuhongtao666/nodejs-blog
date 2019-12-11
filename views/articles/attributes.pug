@@ -19,10 +19,11 @@ block content
                          | #{categories.shape}
             .animalDescribe
                 .title
-                    | 宠物的喂食要点
+                    | 宠物的饲养方法
                 .content
+                    each fee in categories.feed
                         p
-                            | #{categories.feed}
+                            | #{fee}
             if categories.environment
                 .animalDescribe
                     .title
