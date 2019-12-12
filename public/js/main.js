@@ -1,6 +1,6 @@
 $(function(){
     // zymedia('video',{autoplay: true});
-    new zymedia('video', {"autoplay": "true","preload": "none",});
+    new zymedia('video', {"autoplay": "true","preload": "auto",});
     $('.delete-article').on('click',function(e){
         console.log($(this).data('id'));
         $.ajax({
