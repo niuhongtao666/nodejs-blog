@@ -1,4 +1,5 @@
 $(function(){
+    zymedia('video',{autoplay: true});
     $('.delete-article').on('click',function(e){
         console.log($(this).data('id'));
         $.ajax({
