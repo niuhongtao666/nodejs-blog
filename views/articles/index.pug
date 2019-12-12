@@ -28,10 +28,9 @@ block content
         .closeSizeFirstNo
     #zt.container.m0.bod.videoZone.mt20
         .col-lg-7.videoLeft
-            video
-                source(src='http://vd2.bdstatic.com/mda-jm5nzzefd490n34q/sc/mda-jm5nzzefd490n34q.mp4', type='video/mp4')
+            video(controls autoplay)
+                source(src='/video/1.mp4', type='video/mp4')
         .col-lg-5.videoRight
-
     if articles.length
         #zt.container-fluid.m
             .container.m0.bod
