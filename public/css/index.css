@@ -22,7 +22,7 @@
     }
     .videoRight{
         height: 363px;
-        background: #fff;
+        /*background: #fff;*/
         box-sizing: border-box;
         padding:0px;
         /*padding-left: 0px;*/
@@ -62,7 +62,7 @@
     }
     .videoRight{
         /*height: 200px;*/
-        background: #fff;
+        /*background: #fff;*/
         box-sizing: border-box;
         padding:0px;
         margin-top: 10px;
